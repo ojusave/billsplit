@@ -1,4 +1,6 @@
 import Link from "next/link";
+import DeployToRenderButton from "@/components/DeployToRenderButton";
+import { GITHUB_REPO_URL } from "@/lib/render";
 
 export default function Header() {
   return (
@@ -16,18 +18,9 @@ export default function Header() {
       </Link>
 
       <div className="flex items-center gap-2">
-        {/* <button className="flex justify-center items-center gap-1 px-3 py-2 rounded bg-[#fff9f6] border-[0.7px] border-[#d1d5dc]">
-          <img
-            className="w-3.5 h-3.5 rounded-[3px]"
-            src="/together.svg"
-            alt="API Key Logo"
-          />
-          <p className="text-xs sm:text-sm font-medium text-[#364153]">
-            API Key
-          </p>
-        </button> */}
+        <DeployToRenderButton />
         <a
-          href="https://github.com/nutlope/billsplit"
+          href={GITHUB_REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-end items-center gap-1.5 p-2 sm:px-[14px] sm:py-[7px] rounded bg-[#d04f17]"
